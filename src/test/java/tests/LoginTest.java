@@ -2,10 +2,9 @@ package tests;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import base.BaseTest;
+import pages.LoginPage;
 import utils.RetryAnalyzer;
 
 public class LoginTest extends BaseTest {
@@ -14,15 +13,20 @@ public class LoginTest extends BaseTest {
 	@Test(retryAnalyzer = RetryAnalyzer.class)
 	public void Login() {
 		System.out.println("Running testLogin...");
-		WebElement usernameField = driver.findElement(By.id("userName"));
-		usernameField.sendKeys("swamy");
+
+		// Create an instance of LoginPage
+		LoginPage loginPage = new LoginPage(driver);
+
+		// Perform login actions using methods from LoginPage
+		loginPage.enterUsername("swamy");
 		log.info("username is entered");
-		WebElement passwordField = driver.findElement(By.id("password"));
-		passwordField.sendKeys("Swamy@456789");
+
+		loginPage.enterPassword("Swamy@456789");
 		log.info("password is entered");
-		WebElement loginButton = driver.findElement(By.xpath("//*[@id=\"login\"]"));
-		loginButton.click();
+
+		loginPage.clickLoginButton();
 		log.info("loginButton is clicked");
+
 	}
 
 }
