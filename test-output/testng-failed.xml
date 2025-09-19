@@ -6,8 +6,8 @@
       <class name="tests.LoginTest">
         <methods>
           <include name="setUp"/>
-          <include name="Login"/>
           <include name="teardown"/>
+          <include name="Login"/>
         </methods>
       </class> <!-- tests.LoginTest -->
     </classes>
