@@ -1,0 +1,5 @@
+2025-09-19 16:50:14,846 INFO b.BaseTest [main] browser maximized
+2025-09-19 16:50:19,605 INFO t.LoginTest [main] username is entered
+2025-09-19 16:50:19,737 INFO t.LoginTest [main] password is entered
+2025-09-19 16:50:19,821 INFO t.LoginTest [main] loginButton is clicked
+2025-09-19 16:50:21,299 INFO b.BaseTest [main] browser closed

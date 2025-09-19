@@ -13,7 +13,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest {
 	private static final Logger log = LogManager.getLogger(BaseTest.class);
-	protected WebDriver driver;
+	public static WebDriver driver;
 
 	@BeforeMethod
 	public void setUp() {
